@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {     /*Install background image */
+        background-image: url("{{ url_for('static', filename='workbg.gif') }}");
+        background-size: 100% 100%;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 20px;
+        padding: 0;
+        }
+
+        .back-icon{
+            position: fixed;
+            top: 2%;
+            left: 3%;
+            width:45px;
+            height:auto;
+            z-index: 201;
+        }
+        .search:hover{
+            scale: 1.2;
+        }
+        .search{
+            position: fixed;
+            top: 22%;
+            left: 7%;
+            width: 250px;
+            height: 330px;
+            z-index: 100;
+            border: 5px solid #1a1a1a;
+            display: inline-block;
+            transition: scale 0.3s ease-in-out;
+        }
+        .more1:hover{
+            scale: 1.2;
+        }
+        .more1{
+            position: fixed;
+            top: 22%;
+            left: 30%;
+            width: 250px;
+            height:330px;
+            z-index: 100;
+            border: 5px solid #1a1a1a;
+            display: inline-block;
+            transition: scale 0.3s ease-in-out;
+        }
+        .more2:hover{
+            scale: 1.2;
+        }
+        .more2{
+            position: fixed;
+            top: 22%;
+            left: 53%;
+            width: 250px;
+            height: 330px;
+            z-index: 100;
+            border: 5px solid #1a1a1a;
+            display: inline-block;
+            transition: scale 0.3s ease-in-out;
+        }
+
+        .more3:hover{
+            scale: 1.2;
+        }
+        .more3{
+            position: fixed;
+            top: 22%;
+            left: 75%;
+            width: 250px;
+            height: 330px;
+            z-index: 100;
+            border: 5px solid #1a1a1a;
+            display: inline-block;
+            transition: scale 0.3s ease-in-out;
+        }
+
+        .text-label {
+            position: absolute;
+            text-align: center;
+            color: #ffffff;
+            font-size: 25px;
+            font-family: "Calibri";
+            width: 250px; /* Adjust width as needed */
+            top: 500px; /* Adjust top position as needed */
+        }
+        
+        .text-label.search-label {
+            left: 7.5%; /* Adjust left position for the upper */
+        }
+
+        .text-label.more1-label {
+            left: 30%; /* Adjust left position for the triangle */
+        }
+
+        .text-label.more2-label {
+            left: 53.5%; /* Adjust left position for the circle */
+        }
+
+        .text-label.more3-label {
+            left: 75.5%; /* Adjust left position for the more */
+        }
+
+    </style>
+    <title>Works</title>
+</head>
+<body>
+
+    <div class="text-label more1-label">
+        <p> More</p>
+    </div>
+
+    <div class="text-label more2-label">
+        <p>More</p>
+    </div>
+
+    <div class="text-label search-label">
+        <p>Search Algorithm</p>
+    </div>
+
+    <div class="text-label more3-label">
+        <p>More</p>
+    </div>
+
+    <!-- square for back button-->
+    <div class="top-square"></div>
+
+
+    <!-- back button icon -->
+    <a href="/">
+        <img class="back-icon" src="{{ url_for('static', filename='back.png') }}" alt="My Icon">
+    </a>
+
+    <a href="/search_algo">
+        <img class="search" src="{{ url_for('static', filename='search.png') }}" alt="My Icon">
+    </a>
+
+    <img class="more1" src="{{ url_for('static', filename='add.png') }}" alt="My Icon">
+
+    <img class="more2" src="{{ url_for('static', filename='add.png') }}" alt="My Icon">
+
+    <!-- to function circle -->
+
+    <img class="more3" src="{{ url_for('static', filename='add.png') }}" alt="My Icon">
+
+</body>
+</html>
+

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {     /*Install background image */
+        position: absolute;
+        background-image: url("{{ url_for('static', filename='profbg.gif') }}");
+        background-size: 100% 100%;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 20px;
+        padding: 0;
+        overflow-y: scroll;
+        min-height: 5vh; /* Ensure the body takes at least the full viewport height */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        body::after {
+            content: "";
+            display: block;
+            height: 3px; /* Adjust this value as needed for additional space at the bottom */
+        }
+        .top-square{
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 70px;
+            background-color: #33741cb5;
+            z-index: 200;
+        }
+        h1 {
+            color: #C6E115;
+            position: relative;
+            top: 0%;
+            left: 70%;
+            font-size: 50px;
+            font-family:'Gill Sans MT'
+        }
+        .back-icon{
+            position: fixed;
+            top: 2%;
+            left: 3%;
+            width:45px;
+            height:auto;
+            z-index: 201;
+        }
+        .many-circ {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .circle{
+            width: 65px;
+            height: 65px;
+            background-color: #16AE58; /* Blue color, you can change this to your desired color */
+            border-radius: 50%; /* Makes the div a circle */
+            display: inline-block;
+            margin: 18px; /* Adjust the margin to control the spacing between circles */
+            z-index: 100;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .info {
+            font-size: 25px;
+            font-family: Arial, sans-serif;
+            width: 200px;
+            z-index: 100;
+            color: #ffffff;
+            display: block;
+            margin: 38px;
+        }
+        
+
+        .icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 102;
+        }
+        .icon{
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            margin: 35px;
+            z-index: 102;
+        }
+        .logo{
+            position: fixed;
+            top:-5%;
+            left: 88%;
+            width: 150px;
+            height: auto;
+            z-index: 200;
+        }
+    </style>
+    <title>Profile Page</title>
+</head>
+<body>
+    <h1>MEET THE DEVELOPERS</h1>
+
+    <!--Square for background-->
+    <div class="square"></div>
+
+    <!--bg shape-->
+    <div class="slant"></div>
+
+    <!-- square for back button-->
+    <div class="top-square"></div>
+
+    <!-- back button icon -->
+    <a href="/">
+        <img class="back-icon" src="{{ url_for('static', filename='back.png') }}" alt="My Icon">
+    </a>
+
+    <!--Display four circles vertically1-->
+    <div class="many-circ" style="position:absolute; left: 82.6%; top: 155%">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Display four circles vertically2 -->
+    <div class="many-circ" style="position: absolute; left: 133%; top: 530%">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <div class="many-circ" style="position: absolute; left: 82.6%; top: 930%">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    
+    <div class="many-circ" style="position: absolute; left: 133%; top: 1330%">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <div class="many-circ" style="position: absolute; left: 82.6%; top: 1720%">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <div class="many-circ" style="position: absolute; left: 133%; top: 2100%">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    
+    <div class="contact-info" style="position: absolute; top:150%; left: 95%;">
+        <div class="info"> https://www.facebook.com/teddd.feranil</div>
+        <div class="info"> https://www.instagram.com/tedddx_x/</div>
+        <div class="info"> pauloted.22@gmail.com</div>
+        <div class="info"> 09##-###-####</div>
+    </div>
+
+    <div class="contact">
+        <div class="info" style="position: absolute; top: 530%; left: 50%;"> https://www.facebook.com/leoj.suaverdez</div>
+        <div class="info" style="position: absolute; top: 610%; left: 58%;"> https://www.instagram.com/leoj.pogi/</div>
+        <div class="info" style="position: absolute; top: 690%; left: 75%;"> leojsuaverdez@gmail.com</div>
+        <div class="info" style="position: absolute; top: 770%; left: 95%;"> 09##-###-####</div>
+    </div>
+
+    <div class="contact-info" style="position: absolute; top:930%; left: 95%;">
+        <div class="info"> https://www.facebook.com/calmaeugene20 </div>
+        <div class="info"> https://www.instagram.com/geneee014/</div>
+        <div class="info"> calmaeugene06@gmail.com</div>
+        <div class="info"> 09##-###-####</div>
+    </div> 
+
+    <div class="contact-info"> 
+        <div class="info" style="position:absolute; top: 1335%; left: 50%;"> https://www.facebook.com/derick.carlo.3</div>
+        <div class="info" style="position:absolute; top: 1415%; left: 50%;"> https://www.instagram.com/derickcarlo_/</div>
+        <div class="info" style="position:absolute; top: 1480%; left: 70%;"> derickcarloofficial@gmail.com</div>
+        <div class="info" style="position:absolute; top: 1570%; left: 96%;"> 09##-###-####</div>
+    </div>
+
+    <div class="contact-info" style="position: absolute; top:1715%; left: 95%;">
+        <div class="info"> https://www.facebook.com/kennethjohn.costa</div>
+        <div class="info"> https://www.instagram.com/kennn_john/</div>
+        <div class="info"> akosicosta@gmail.com</div>
+        <div class="info"> 09##-###-####</div>
+    </div>
+
+
+    <div class="contact">
+        <div class="info" style="position:absolute; top: 2100%; left: 50%;"> https://www.facebook.com/qwotisolekl</div>
+        <div class="info" style="position:absolute; top: 2180%; left: 40%;"> https://www.instagram.com/chean_bernard/</div>
+        <div class="info" style="position:absolute; top: 2260%; left: 60%;"> cheanbernardvergel@gmail.com</div>
+        <div class="info" style="position:absolute; top: 2340%; left: 90%;"> 09##-###-####</div>
+    </div> 
+
+
+    <!-- Contact Icon1 -->
+    <div class="icons" style="position: absolute; left: 510px; top: 203px">
+        <img class="icon" src="{{ url_for('static', filename='fb.png') }}" alt="FB">
+        <img class="icon" src="{{ url_for('static', filename='instagram.png') }}" alt="instagram">
+        <img class="icon" src="{{ url_for('static', filename='mail.png') }}" alt="email">
+        <img class="icon" src="{{ url_for('static', filename='phone-call.png') }}" alt="phone">
+    </div>
+
+    
+    <!-- Contact Icon2 -->
+    <div class="icons" style="position: absolute; left: 820px; top: 680px">
+        <img class="icon" src="{{ url_for('static', filename='fb.png') }}" alt="FB">
+        <img class="icon" src="{{ url_for('static', filename='instagram.png') }}" alt="instagram">
+        <img class="icon" src="{{ url_for('static', filename='mail.png') }}" alt="email">
+        <img class="icon" src="{{ url_for('static', filename='phone-call.png') }}" alt="phone">
+    </div>
+    
+        <!-- Contact Icon3 -->
+    <div class="icons" style="position: absolute; left: 510px; top: 1190px">
+        <img class="icon" src="{{ url_for('static', filename='fb.png') }}" alt="FB">
+        <img class="icon" src="{{ url_for('static', filename='instagram.png') }}" alt="instagram">
+        <img class="icon" src="{{ url_for('static', filename='mail.png') }}" alt="email">
+        <img class="icon" src="{{ url_for('static', filename='phone-call.png') }}" alt="phone">
+    </div>
+
+        <!-- Contact Icon4 -->
+    <div class="icons" style="position: absolute; left:820px; top: 1703px">
+        <img class="icon" src="{{ url_for('static', filename='fb.png') }}" alt="FB">
+        <img class="icon" src="{{ url_for('static', filename='instagram.png') }}" alt="instagram">
+        <img class="icon" src="{{ url_for('static', filename='mail.png') }}" alt="email">
+        <img class="icon" src="{{ url_for('static', filename='phone-call.png') }}" alt="phone">
+    </div>
+
+    <div class="icons" style="position: absolute; left: 510px; top: 2200px">
+        <img class="icon" src="{{ url_for('static', filename='fb.png') }}" alt="FB">
+        <img class="icon" src="{{ url_for('static', filename='instagram.png') }}" alt="instagram">
+        <img class="icon" src="{{ url_for('static', filename='mail.png') }}" alt="email">
+        <img class="icon" src="{{ url_for('static', filename='phone-call.png') }}" alt="phone">
+    </div>
+
+        <!-- Contact Icon4 -->
+    <div class="icons" style="position: absolute; left: 820px; top: 2685px">
+        <img class="icon" src="{{ url_for('static', filename='fb.png') }}" alt="FB">
+        <img class="icon" src="{{ url_for('static', filename='instagram.png') }}" alt="instagram">
+        <img class="icon" src="{{ url_for('static', filename='mail.png') }}" alt="email">
+        <img class="icon" src="{{ url_for('static', filename='phone-call.png') }}" alt="phone">
+    </div>
+
+    <div><img src="{{ url_for('static', filename='ted.gif') }}" alt="Eugene" style="position:absolute; top: 130%; left:5%; border-radius: 20px; margin:0px; "></div>
+    <div><img src="{{ url_for('static', filename='leoj.gif') }}" alt="Eugene" style="position:absolute; top: 520%; left:160%; border-radius: 20px; "></div>
+    <div><img src="{{ url_for('static', filename='eugene.gif') }}" alt="Eugene" style="position:absolute; top: 910%; left: 5%; border-radius: 20px; "></div>
+    <div><img src="{{ url_for('static', filename='derick.gif') }}" alt="Eugene" style="position:absolute; top: 1300%; left: 160%; border-radius: 20px; "></div>
+    <div><img src="{{ url_for('static', filename='ken.gif') }}" alt="Eugene" style="position:absolute; top: 1690%; left: 5%; border-radius: 20px; "></div>
+    <div><img src="{{ url_for('static', filename='chean.gif') }}" alt="Eugene" style="position:absolute; top: 2080%; left: 160%; border-radius: 20px; "></div>
+
+    <div><img src="{{ url_for('static', filename='upgrade.png') }}" alt="Eugene" style="position:absolute; top: 350px; left:220px; height: 350px; width: auto;"></div>
+    <div><img src="{{ url_for('static', filename='hum.png') }}" alt="Eugene" style="position:absolute; top: 900px; left:890px; height: 300px; width: auto;"></div>
+    <div><img src="{{ url_for('static', filename='heatblast.png') }}" alt="Eugene" style="position:absolute; top: 1380px; left:220px; height: 330px; width: auto;"></div>
+    <div><img src="{{ url_for('static', filename='fourarms.svg') }}" alt="Eugene" style="position:absolute; top: 1850px; left:875px; height: 350px; width: auto;"></div>
+    <div><img src="{{ url_for('static', filename='xlr8.png') }}" alt="Eugene" style="position:absolute; top: 2370px; left:190px; height: 350px; width: auto;"></div>
+    <div><img src="{{ url_for('static', filename='dias.png') }}" alt="Eugene" style="position: absolute; top: 2870px; left:930px; height: 350px; width: auto;"></div>
+    
+    <div>
+        <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="My Icon">
+    </div>
+        
+</html>

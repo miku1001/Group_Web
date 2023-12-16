@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {     /*Install background image */
+        background-image: url("{{ url_for('static', filename='front.gif') }}");
+        background-size: 100% 100%;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0px;
+        padding: 0;
+        }
+
+        .nav-list { /* horizontal navigator */
+            position: fixed;
+            top: 3%;
+            left: 70%;
+            width: 100%;
+            z-index: 101; /* Higher z-index to appear on top */
+        }
+
+        .nav-list li {
+            display: inline;
+            margin-right: 5%;
+        }
+        .nav-list a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 23px;
+            font-family: "Calibri";
+        }
+        h1 {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 80px;
+            font-family: "Calibri";
+            width: 500px;
+            color: #ffffff;
+            line-height: 1.2;
+            text-align: center;
+        }
+        p1 {
+            position: absolute;
+            top: 50%; /* Move the element 50% from the top */
+            left: 50%; /* Move the element 50% from the left */
+            transform: translate(-50%, -50%); /* Center the element using translate */
+            font-size: 25px;
+            font-family: "Calibri";
+            width: 600px;
+            color: #ffffff;
+            line-height: 1.2;
+            text-align: center;
+
+        }
+        .works:hover{
+            transform: translateX(-50%) scale(1.2);
+        }
+
+        .works {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease-in-out;
+        }
+        .works a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: #46a925d4;
+            font-family: "Calibri";
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: scale 0.3s ease-in-out;
+        }
+        .logo{
+            position: fixed;
+            top: -22px;
+            left: 20px;
+            width: 150px;
+            height: auto;
+        }
+    </style>
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to Our Website</h1>
+    <div class="centered-list">
+        <ul class="nav-list">
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </div>
+    <p1>This website was created to showcase different projects created by a group of developers</p1>
+
+    <div class="works">
+        <a href="/works">Go to Works</a>
+    </div>
+
+    <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="My Icon">
+    
+</body>
+</html>
