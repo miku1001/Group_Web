@@ -11,6 +11,24 @@
         padding: 0;
         }
 
+        .nav-list { /* horizontal navigator */
+            position: fixed;
+            top: 1%;
+            left: 70%;
+            width: 100%;
+            z-index: 101; /* Higher z-index to appear on top */
+        }
+
+        .nav-list li {
+            display: inline;
+            margin-right: 5%;
+        }
+        .nav-list a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 23px;
+            font-family: "Calibri";
+        }
         .back-icon{
             position: fixed;
             top: 2%;
@@ -160,6 +178,13 @@
 
     <img class="more3" src="{{ url_for('static', filename='add.png') }}" alt="My Icon">
 
+    <div class="centered-list">
+        <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </div>
 </body>
 </html>
 

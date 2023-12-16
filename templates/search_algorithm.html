@@ -9,7 +9,35 @@
             width:45px;
             height:auto;
             z-index: 201;
+          }
+      body {     /*Install background image */
+        background-image: url("{{ url_for('static', filename='workbg.gif') }}");
+        background-size: 100% 100%;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 20px;
+        padding: 0;
         }
+
+      .pdf-link-button {
+        padding: 10px 50px;
+        font-size: 16px;
+        background-color: #3498db;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+        text-align: center;
+        margin-left: 44%;
+        margin-bottom: 30px;
+        margin-top: 20px;
+      }
+
+      .pdf-link-button:hover {
+        background-color: #2980b9;
+      }
+
     </style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -61,6 +89,7 @@
       <img class="back-icon" src="{{ url_for('static', filename='back.png') }}" alt="My Icon">
     </a>
 
+    <a href="https://github.com/LeoSuave25/search_algo/blob/main/Group%204_Laboratory%20Exercise.pdf" target="_blank" class="pdf-link-button">View Result</a>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

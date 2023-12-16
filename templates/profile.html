@@ -29,6 +29,25 @@
             background-color: #33741cb5;
             z-index: 200;
         }
+        .nav-list { /* horizontal navigator */
+            position: fixed;
+            top: 1%;
+            left: 70%;
+            width: 100%;
+            z-index: 200; /* Higher z-index to appear on top */
+        }
+
+        .nav-list li {
+            display: inline;
+            margin-right: 5%;
+        }
+        .nav-list a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 23px;
+            font-family: "Calibri";
+        }
+
         h1 {
             color: #C6E115;
             position: relative;
@@ -89,14 +108,6 @@
             display: inline-block;
             margin: 35px;
             z-index: 102;
-        }
-        .logo{
-            position: fixed;
-            top:-5%;
-            left: 88%;
-            width: 150px;
-            height: auto;
-            z-index: 200;
         }
     </style>
     <title>Profile Page</title>
@@ -267,9 +278,14 @@
     <div><img src="{{ url_for('static', filename='fourarms.svg') }}" alt="Eugene" style="position:absolute; top: 1850px; left:875px; height: 350px; width: auto;"></div>
     <div><img src="{{ url_for('static', filename='xlr8.png') }}" alt="Eugene" style="position:absolute; top: 2370px; left:190px; height: 350px; width: auto;"></div>
     <div><img src="{{ url_for('static', filename='dias.png') }}" alt="Eugene" style="position: absolute; top: 2870px; left:930px; height: 350px; width: auto;"></div>
-    
-    <div>
-        <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="My Icon">
+
+    <div class="centered-list">
+        <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
     </div>
+    
         
 </html>
