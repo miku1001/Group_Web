@@ -33,6 +33,20 @@
             display: inline-block;
             transition: scale 0.3s ease-in-out;
         }
+        .stack{
+            position: fixed;
+            top: 22%;
+            left: 30%;
+            width: 250px;
+            height: 330px;
+            z-index: 100;
+            border: 5px solid #1a1a1a;
+            display: inline-block;
+            transition: scale 0.3s ease-in-out;
+        }
+        .stack:hover{
+            scale: 1.2;
+        }
         .more1:hover{
             scale: 1.2;
         }
@@ -109,7 +123,7 @@
 <body>
 
     <div class="text-label more1-label">
-        <p> More</p>
+        <p> Stack Algorithm</p>
     </div>
 
     <div class="text-label more2-label">
@@ -136,8 +150,9 @@
     <a href="/search_algo">
         <img class="search" src="{{ url_for('static', filename='search.png') }}" alt="My Icon">
     </a>
-
-    <img class="more1" src="{{ url_for('static', filename='add.png') }}" alt="My Icon">
+    <a href="/stack_algo">
+        <img class="stack" src="{{ url_for('static', filename='stack.png') }}" alt="My Icon">
+    </a>
 
     <img class="more2" src="{{ url_for('static', filename='add.png') }}" alt="My Icon">
 

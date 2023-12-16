@@ -6,6 +6,7 @@ from interpolation_search import interpolation_search, interpolation_search_wrap
 from jump_search import jump_search, jump_search_wrapper
 from linear_search import linear_search, linear_search_wrapper
 from ternary_search import ternary_search, ternary_search_wrapper
+from shunting_algo import infix_to_postfix
 
 app = Flask(__name__)
     
@@ -24,7 +25,20 @@ def works():
 @app.route('/about')
 def about():
     return render_template('about.html')
+@app.route('/stack_algo', methods=['GET', 'POST'])
+def stack_algo():
+    if request.method == "POST":
+        array_str = request.form.get("array")
+        algo_type = request.form.get("algo_type")
 
+        try:
+            if algo_type == "Shunting Yard":
+                result = infix_to_postfix(array_str)
+                return render_template('stack_algorithm.html',result=result)
+        except ValueError:
+            return render_template("stack_algorithm.html", error="Invalid input. Ensure the array ia a math expression.")
+    
+    return render_template('stack_algorithm.html')
 @app.route('/search_algo', methods=['GET', 'POST'])
 def search_algo():
     numbers = range(1, 1001)
